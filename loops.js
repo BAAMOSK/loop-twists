@@ -37,7 +37,8 @@ function average(numbers) {
 
 function average(numbers) {
   let sum = 0;
-  return numbers.forEach(i => i + sum) / numbers.length;    
+  numbers.forEach(i => sum += i);
+  return sum / numbers.length;    
 }
 
 var nums = [1,2,3,4,5,6,7,8,9,10];
