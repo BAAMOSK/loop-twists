@@ -17,29 +17,38 @@
 // The Rocks on the Road hazard has triggered 1 time(s) today!
 // The Rocks on the Road hazard has triggered 2 time(s) today!
 // The Rocks on the Road hazard has triggered 3 time(s) today!
-let warningCounter = 0; 
-var time = 'times';
 
-function hazardWarningCreator(typeOfWarning){
 
+function hazardWarningCreator(typeOfWarning){    
+    let warningCounter = 0; 
+        
 	return function(location){
-		console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
-		if(warningCounter === 1) {
-  	  		time = 'time';
-    	} 
-    	else{
-    		time = "times";
-    	}
+		console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);	let time = 'times';    
+        if(warningCounter === 1) {
+        time = 'time';
+        }	
     	console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${time} today!`);   
     	warningCounter++; 
 	}
-
 }
 
 const rocksWarning = hazardWarningCreator('Rocks on the Road');
-const slipperyWarning = hazardWarningCreator('Rocks on the Road');
+const rockyRoad = hazardWarningCreator('There is a hurricane');
 const waterWarning = hazardWarningCreator("Water levels are high");
 
-rocksWarning("first street");
-slipperyWarning("second street");
-waterWarning("third street");
+rocksWarning("Capital street");
+rocksWarning("Main street");
+rocksWarning("Fifth Avenue");
+rockyRoad("Florida street");
+rockyRoad("Miami street");
+waterWarning("Melbourne street");
+waterWarning("Kiwi street");
+waterWarning("Koala street");
+rocksWarning("North street");
+rocksWarning("South street");
+
+
+
+
+
+

@@ -1,19 +1,24 @@
 function fizzBuzz(num) {
     var result = [];
     
-    for(var i = 1; i < num.length; i++) {
-        switch (i >= 0) {
-            case (num[i] % 15 === 0):    
+    
+    for(var i = 1; i < num; i++) {
+        switch (i % 15) {
+            case 0:    
               result.push('FizzBuzz');
               break;
-            case (num[i] % 5 === 0):
+            case 5:
+            case 10:
               result.push('Buzz');
               break;
-            case (num[i] % 3 === 0):
+            case 3:
+            case 6:
+            case 9:
+            case 12:
               result.push('Fizz');
               break;
             default:
-              result.push(num[i]);
+              result.push(i);
         }    
     }
     return result;
@@ -41,7 +46,7 @@ function getNums(maxNumber) {
     return result;
 }
 
-var nums = getNums(17);
-var result = fizzBuzz(nums);
+//var nums = getNums(17);
+var result = fizzBuzz(32);
 
 console.log(result);
