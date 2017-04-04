@@ -21,3 +21,16 @@ function min(numbers) {
    }
   return smallest;
 }
+
+//Compute the average
+function average(numbers) {
+  let i = 0;
+  let counter = numbers.length;
+  let total = 0;
+  
+  while(counter > i){
+    total = total + numbers[i];
+    i++;
+  }
+  return (total / counter);
+}
